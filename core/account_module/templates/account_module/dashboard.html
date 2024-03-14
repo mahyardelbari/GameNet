@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>داشبورد</title>
+</head>
+<body>
+<h1>
+    {% if user.is_authenticated %}
+        <h1> خوش اومدید {{ user }} </h1>
+    {% else %}
+        <h1>کاربر مورد نظر پیدا نشد</h1>
+    {% endif %}
+</h1>
+</body>
+</html>

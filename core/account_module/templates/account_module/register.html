@@ -1,0 +1,26 @@
+{% extends 'account_module/base.html' %}
+{% load static %}
+
+{% block title %}
+ورود / ثبت نام
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1 class="text-center mb-4">ورود / ثبت نام</h1>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <div class="form-group text-center">
+                        <img src="{% static 'images/mobile.png' %}" alt="Mobile Icon" class="img-fluid mb-2">
+                        <input type="text" class="form-control" name="mobile" placeholder="شماره موبایل">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">ورود / ثبت نام</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
